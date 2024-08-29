@@ -1,14 +1,8 @@
-import './App.css'
+import './App.css';
+// import { v4 as uuidv4 } from 'uuid';
 
 function App() {
-
-  return (
-    <>
-      <div>
-
-      </div>
-    </>
-  )
+    return <div />;
 }
 
-export default App
+export default App;
