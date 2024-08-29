@@ -30,7 +30,7 @@ module.exports = {
                 tsx: 'alway',
             },
         ],
-        'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+        'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
         'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
         'jsx-a11y/no-autofocus': 'off',
         'no-alert': 'off',
