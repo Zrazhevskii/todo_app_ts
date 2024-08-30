@@ -17,8 +17,13 @@ module.exports = {
     parserOptions: { project: './tsconfig.json', ecmaVersion: 'latest', sourceType: 'module' },
     settings: {
         react: { version: '18.2' },
+        'import/resolver': {
+            node: {
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
+            },
+        },
     },
-    plugins: ['react-refresh', 'react', 'import', 'jsx-a11y'],
+    plugins: ['@typescript-eslint', 'react-refresh', 'react', 'import', 'jsx-a11y'],
     rules: {
         'import/no-unresolved': [2, { caseSensitive: false }],
         'react/react-in-jsx-scope': 'off',
