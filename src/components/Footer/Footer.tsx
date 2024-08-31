@@ -2,11 +2,6 @@ import { useState } from 'react';
 import './Footer.css';
 import { FooterProps } from '../../models';
 
-// interface HTMLElementWithContent extends HTMLElement {
-//     innerHTML?: string;
-//     textContent?: string;
-//   }
-
 export default function Footer({ clearTasksCompleted, updateStatus, activeCount }: FooterProps) {
     const [classActive, setClassActive] = useState({
         all: 'selected',
