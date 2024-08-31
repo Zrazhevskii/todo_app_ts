@@ -1,27 +1,32 @@
-# React + TypeScript + Vite
+# TODO App TypeScript - Tooling и развертывание приложения
+Ссылка Vercel - [ссылка](https://todo-app-ts-alpha.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Для этого этапа вам потребуются следующие пакеты:
+- eslint
+- eslint-config-airbnb
+- eslint-config-prettier
+- eslint-plugin-import
+- eslint-plugin-jsx-a11y
+- eslint-plugin-react
+- eslint-plugin-react-hooks
+- babel-eslint
+- prettier
+- husky
+- lint-staged
 
-Currently, two official plugins are available:
+# Конфиг 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* .prettierrc
+* .eslintrc.json
+* В настройке lint-staged должна быть сначала проверка eslint и только после этого форматирование через prettier
 
-## Expanding the ESLint configuration
+# Что нужно сделать
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Установите eslint/prettier, установите все плагины, необходимые для работы airbnb конфига.
+2. Добавьте в ваш package.json скрипты
+    * lint - проверяет все файлы на ошибки
+    * lint:fix - проверяет и исправляет те ошибки, которые может
+    * format - форматирует все файлы с помощью prettier
+3. Отформатируйте ваш проект и устраните все ошибки
+4. Настройке husky + lint-staged
+5. Выгрузите свое приложение на Vercel (ex now.sh) - [Инструкция по выгрузке](https://gist.github.com/didolf/48f51b2f891aceff35048334eb3a96c8)
