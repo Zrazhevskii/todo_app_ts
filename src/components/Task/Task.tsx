@@ -3,7 +3,13 @@ import { formatDistanceToNow } from 'date-fns';
 import ChangeForm from '../ChangeForm/ChangeForm';
 import { TaskProps } from '../../models';
 
-export default function Task({ item, deletTask, toggleChecked, updateTask, startCountDownTimer }: TaskProps) {
+export default function Task({
+    item,
+    deletTask,
+    toggleChecked,
+    updateTask,
+    startCountDownTimer,
+}: TaskProps): JSX.Element {
     const { idTask, task, active, created, min, sec } = item;
     const [date, setDate] = useState(formatDistanceToNow(created));
     const [changeClass, setChangeClass] = useState(false);

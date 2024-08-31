@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './Footer.css';
 import { FooterProps } from '../../models';
 
-export default function Footer({ clearTasksCompleted, updateStatus, activeCount }: FooterProps) {
+export default function Footer({ clearTasksCompleted, updateStatus, activeCount }: FooterProps): JSX.Element {
     const [classActive, setClassActive] = useState({
         all: 'selected',
         itemActive: '',
